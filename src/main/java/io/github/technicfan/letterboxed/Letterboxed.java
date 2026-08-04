@@ -20,7 +20,7 @@ import net.fabricmc.loader.api.FabricLoader;
 public class Letterboxed implements ClientModInitializer {
     public static final String MOD_ID = "letterboxed";
     private static long handle;
-    private static final File config = FabricLoader.getInstance().getConfigDir().resolve("aspectratio").toFile();
+    private static final File config = FabricLoader.getInstance().getConfigDir().resolve("letterboxed").toFile();
     public static int guiScale, height, width, guiScaledHeightOff, guiScaledWidthOff, guiScaledWidth, guiScaledHeight, fakeWidth, fakeHeight, fakeGuiWidth, fakeGuiHeight;
     public static double heightOff, widthOff, actualRatio, targetRatio;
 
