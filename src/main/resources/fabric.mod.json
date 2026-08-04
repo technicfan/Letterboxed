@@ -1,0 +1,18 @@
+{
+    "schemaVersion": 1,
+    "id": "letterboxed",
+    "version": "${version}",
+    "name": "Letterboxed",
+    "description": "Lets you play in your desired aspect ratio",
+    "authors": ["technicfan"],
+    "license": "MIT",
+    "environment": "client",
+    "entrypoints": {
+        "client": ["io.github.technicfan.letterboxed.Letterboxed"]
+    },
+    "mixins": ["letterboxed.mixins.json"],
+    "depends": {
+        "fabricloader": ">=${loader}",
+        "minecraft": ">=${minecraft}"
+    }
+}

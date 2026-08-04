@@ -1,0 +1,14 @@
+{
+    "required": true,
+    "package": "technicfan.aspectratio.mixins",
+    "compatibilityLevel": "JAVA_21",
+    "mixins": [
+        "WindowMixin",
+        "GameRendererMixin",
+        "MouseHandlerMixin",
+        "GuiGraphicsMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
