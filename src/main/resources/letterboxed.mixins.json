@@ -1,6 +1,6 @@
 {
     "required": true,
-    "package": "technicfan.aspectratio.mixins",
+    "package": "io.github.technicfan.letterboxed.mixins",
     "compatibilityLevel": "JAVA_21",
     "mixins": [
         "WindowMixin",

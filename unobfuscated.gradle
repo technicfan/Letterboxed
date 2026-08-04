@@ -12,13 +12,22 @@ base {
 dependencies {
 	minecraft "com.mojang:minecraft:${sc.current.version}"
 
-    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+
+stonecutter {
+    replacements.string(true) {
+       replace "ClientCommandManager", "ClientCommands"
+       replace "GuiGraphics ", "GuiGraphicsExtractor "
+       replace "GuiGraphics;", "GuiGraphicsExtractor;"
+       replace "GuiGraphics.", "GuiGraphicsExtractor."
+    }
 }
 
 processResources {
     inputs.property "version", project.version
-    inputs.property "minecraft", project.minecraft_version
+    inputs.property "minecraft", project.supported_versions
     inputs.property "loader", project.loader_version
 
     filesMatching("fabric.mod.json") {

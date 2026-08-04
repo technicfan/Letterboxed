@@ -13,6 +13,7 @@
     "mixins": ["letterboxed.mixins.json"],
     "depends": {
         "fabricloader": ">=${loader}",
-        "minecraft": ">=${minecraft}"
+        "minecraft": "${minecraft}",
+        "fabric-api": "*"
     }
 }
