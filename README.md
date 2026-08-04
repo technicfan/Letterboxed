@@ -11,3 +11,5 @@ Setting the ratio to `0` will effectively disable the Mod.
 I'm probably going to add some kind of GUI to configure the Mod (idk yet).
 
 As the mod doesn't just draw black bars to the screen, but also move the GUI around, there are probably many Mods that won't render their UI correctly with this mod installed.
+
+The mod will also only affect the GUI not the actual 3d world. So the black bars can overlap important stuff like your hands if you use to high or low ratios.
