@@ -3,9 +3,13 @@
     "id": "letterboxed",
     "version": "${version}",
     "name": "Letterboxed",
-    "description": "Lets you play in your desired aspect ratio",
+    "description": "Lets you play in any aspect ratio",
     "authors": ["technicfan"],
+    "contact": {
+        "sources": "https://github.com/technicfan/Letterboxed"
+    },
     "license": "MIT",
+    "icon": "assets/letterboxed/icon.png",
     "environment": "client",
     "entrypoints": {
         "client": ["io.github.technicfan.letterboxed.Letterboxed"]
