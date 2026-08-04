@@ -4,7 +4,7 @@ This is a fun little mod I made because I started playing Minecraft (Java) on an
 
 You can set any aspect ratio you want and the mod will keep it preserved adding black bars on the sides or top and bottom.
 
-You can configure the mod via the `/letterboxed` command. Either set a ratio directly via `/letterboxed <ratio>` or indirectly via `/letterboxed <width> <height>` (the ratio will be `width / height`).
+You can configure the mod via the `/letterboxed` command. Either set a ratio directly via `/letterboxed <ratio>` or indirectly via `/letterboxed <width> <height>` (the ratio will be `width / height`). `/letterboxed reset` is basically just `/letterboxed set 0`.
 
 Setting the ratio to `0` will effectively disable the Mod.
 
