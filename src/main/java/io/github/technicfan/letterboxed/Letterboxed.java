@@ -18,6 +18,7 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class Letterboxed implements ClientModInitializer {
+    public static final String MOD_ID = "letterboxed";
     private static long handle;
     private static final File config = FabricLoader.getInstance().getConfigDir().resolve("aspectratio").toFile();
     public static int guiScale, height, width, guiScaledHeightOff, guiScaledWidthOff, guiScaledWidth, guiScaledHeight, fakeWidth, fakeHeight, fakeGuiWidth, fakeGuiHeight;
@@ -26,7 +27,7 @@ public class Letterboxed implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> dispatcher.register(
-            ClientCommandManager.literal("aspectratio")
+            ClientCommandManager.literal("letterboxed")
                 .then(ClientCommandManager.literal("set")
                     .then(ClientCommandManager.argument("ratio", DoubleArgumentType.doubleArg())
                         .executes(Letterboxed::setLiteral))
