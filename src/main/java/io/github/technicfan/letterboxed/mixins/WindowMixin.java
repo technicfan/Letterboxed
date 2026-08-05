@@ -20,6 +20,14 @@ public final class WindowMixin {
     @Shadow
     private int guiScale, guiScaledWidth, guiScaledHeight, framebufferHeight, framebufferWidth;
 
+    @Inject(method = "<init>", at = @At("TAIL"))
+    private void init(CallbackInfo ci) {
+        Letterboxed.fakeWidth = framebufferWidth;
+        Letterboxed.fakeHeight = framebufferHeight;
+        Letterboxed.guiScaledWidth = guiScaledWidth;
+        Letterboxed.guiScaledHeight = guiScaledHeight;
+    }
+
     @Inject(method = {"getScreenWidth"}, at = @At("TAIL"), cancellable = true)
     private void overrideWidth(CallbackInfoReturnable<Integer> cir) {
         cir.setReturnValue(Letterboxed.fakeWidth);
@@ -45,7 +53,7 @@ public final class WindowMixin {
     }
 
     @Inject(method = "setGuiScale", at = @At("TAIL"))
-    public void applyScale(CallbackInfo ci) {
+    private void applyScale(CallbackInfo ci) {
         Letterboxed.guiScale = guiScale;
         Letterboxed.guiScaledHeight = guiScaledHeight;
         Letterboxed.guiScaledWidth = guiScaledWidth;

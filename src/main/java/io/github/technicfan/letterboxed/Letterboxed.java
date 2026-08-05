@@ -43,6 +43,14 @@ public class Letterboxed implements ClientModInitializer {
         targetRatio = load();
     }
 
+    public static int leftFull() {
+        return leftOff() * guiScale;
+    }
+
+    public static int topFull() {
+        return topOff() * guiScale;
+    }
+
     public static int leftOff() {
         return guiScaledWidthOff % 2 == 0 ? guiScaledWidthOff / 2 : guiScaledWidthOff / 2 + 1;
     }
