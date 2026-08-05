@@ -6,7 +6,8 @@
         "WindowMixin",
         "GameRendererMixin",
         "MouseHandlerMixin",
-        "GuiGraphicsMixin"
+        "GuiGraphicsMixin",
+        "InventoryScreenMixin"
     ],
     "injectors": {
         "defaultRequire": 1

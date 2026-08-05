@@ -22,6 +22,7 @@ stonecutter {
        replace "GuiGraphics ", "GuiGraphicsExtractor "
        replace "GuiGraphics;", "GuiGraphicsExtractor;"
        replace "GuiGraphics.", "GuiGraphicsExtractor."
+       replace "renderEntity", "extractEntity"
     }
 }
 
